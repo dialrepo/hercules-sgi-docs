@@ -1,0 +1,11 @@
+# Hércules : IU\-CSP\-0070 \- Gestión de fuentes de financiación
+
+
+
+* [IU\-CSP\-0070\-001 \- Crear fuente de financiación](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-001-crear-fuente-de-financiacion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-001-crear-fuente-de-financiacion.md")
+* [IU\-CSP\-0070\-002 \- Buscar y listar fuentes de financiación](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-002-buscar-y-listar-fuentes-de-financiacion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-002-buscar-y-listar-fuentes-de-financiacion.md")
+* [IU\-CSP\-0070\-003 \- Modificar fuente de financiación](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-003-modificar-fuente-de-financiacion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0070-gestion-de-fuentes-de-financiacion/iu-csp-0070-003-modificar-fuente-de-financiacion.md")
+
+
+
+

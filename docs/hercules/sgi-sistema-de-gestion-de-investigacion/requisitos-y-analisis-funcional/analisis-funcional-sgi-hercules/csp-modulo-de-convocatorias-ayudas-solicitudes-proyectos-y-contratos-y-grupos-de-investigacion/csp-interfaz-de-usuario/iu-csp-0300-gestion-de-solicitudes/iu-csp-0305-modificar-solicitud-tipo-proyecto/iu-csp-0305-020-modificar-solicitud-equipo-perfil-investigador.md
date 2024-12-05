@@ -1,0 +1,51 @@
+# Hércules : IU\-CSP\-0305\-020 \- Modificar solicitud \- Equipo \- Perfil Investigador
+
+
+
+## Formulario Modificar solicitud \- Equipo \- Perfil Investigador
+
+Formulario para añadir los miembros del equipo en una solicitud de tipo "proyecto", para el actor ACT\-CSP\-001\-Investigador. El solicitante se añadirá automáticamente en el listado de miembros con el rol Investigador principal.
+
+
+
+|  | | |
+| --- | --- | --- |
+| Nombre | Tipo | Características / Notas |
+| El apartado "Equipo" y, en general, todo del bloque "Datos proyecto" solamente estará visible si el campo "formulario solicitud" de la tabla "solicitud" toma valor "proyecto". | | |
+| Listado de miembros del equipo de proyecto. Tabla "solicitud proyecto equipo" | | |
+| Advertencia | Icono de alerta con tooltip | Las comprobaciones para mostrar o no el icono de advertencia solamente se realizarán si la solicitud está vinculada a una convocatoria registrada en el SGI (campo "convocatoria" de la tabla "solicitud" está informado). Para cada miembro del equipo (tabla "solicitud proyecto equipo") se realizarán la siguientes comprobaciones respecto a los datos de la convocatoria (requisitos IP y requisitos equipo).* Si el miembro tiene un rol principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "true"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito IP": Se aplicarán las comprobaciones especificadas en [CU\-CSP\-1100\-003 \- Comprobación requisitos IP de convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-003-comprobacion-requisitos-ip.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-003-comprobacion-requisitos-ip.md") sobre el "persona ref" del miembro. 	+ Si cualquiera de las comprobaciones anteriores no se cumple se mostrará el icono de advertencia con el tooltip "No se cumplen los requisitos establecidos por la convocatoria." * Si el miembro tiene un rol que no sea principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "false"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito equipo". Se aplicarán las comprobaciones especificadas en [CU\-CSP\-1100\-004 \- Comprobación Requisitos equipo](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-004-comprobacion-requisitos-equipo.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-004-comprobacion-requisitos-equipo.md")   sobre el "persona ref" del miembro: 	+ Si cualquiera de las comprobaciones anteriores no se cumple se mostrará el icono de advertencia con el tooltip "No se cumplen los requisitos establecidos por la convocatoria" |
+| Nombre | Texto corto | Nombre del miembro del equipo de proyecto, recuperado por medio de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona.md") |
+| Apellidos | Texto corto | Apellidos del miembro del equipo de proyecto, recuperado por medio de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona.md") |
+| Rol en el equipo | Texto corto | Rol con el que participará el miembro en el equipo de proyecto. Se deberá indicar obligatoriamente un rol para cada uno de los miembros del equipo. El solicitante se añadirá automáticamente en el listado de miembros con el rol Investigador principal. Los roles disponibles serán los configurados en la tabla "Rol proyecto" |
+| Modificar | Icono de acción | Acción modificar |
+| Eliminar | Icono de acción | Acción eliminar |
+| Añadir miembro | Botón | Acción Añadir miembro |
+|  | Texto informativo | Se mostrará de manera continua el texto informativo: "Si el miembro del equipo que desea añadir no está disponible en el buscador de personas, por favor, indíquelo en el campo "Observaciones" del apartado "Datos generales". |
+
+
+
+| Acciones | Descripción | Enlace CU. | Permisos |
+| --- | --- | --- | --- |
+| Modificar | Permite modificar los datos del miembro seleccionado del listado del equipo | Se resuelve con la pantalla [IU\-CSP\-0302\-004 \- Añadir\-modificar miembro de equipo](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo.md"). | CSP\-SOL\-INV\-ER |
+| Eliminar | Elimina el miembro del equipo de proyecto | Elimina el registro de la tabla "Solicitud Proyecto Equipo". | CSP\-SOL\-INV\-ER |
+| Paginación | Componente estándar de paginación sobre la tabla de lista de resultados. |  |  |
+| Añadir miembro | Añade un nuevo miembro al equipo | Muestra la pantalla [IU\-CSP\-0302\-004 \- Añadir\-modificar miembro de equipo](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo.md"). | CSP\-SOL\-INV\-ER |
+
+### Botones generales a la pantalla
+
+
+
+| Acciones | Descripción | Enlace CU. | Permisos |
+| --- | --- | --- | --- |
+| Guardar | Crea la solicitud con la información introducida en el formulario.Al guardar una solicitud se guardar la información de todos los apartados de definición de la solicitud. | Aplicar comprobaciones especificadas en [CU\-CSP\-1100\-001 Modificar solicitud \- Guardar](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar.md")Aplicar las validaciones para mostrar los mensajes de advertencia  a partir de las comprobaciones a realizar sobre los apartados requisitos IP y requisitos equipo descritos en [CU\-CSP\-1100\-001 Modificar solicitud \- Guardar](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar.md") (pestaña Equipo). | CSP\-SOL\-INV\-ER |
+| Cancelar | Retorna al listado de Solicitud sin salvar los posibles cambios.Al cancelar una solicitud se cancela la información de todas las pestañas de la pantalla, sin salvar los posibles cambios. |  |  |
+
+### Permisos de acceso a la pantalla
+
+#### Por actor
+
+#### Todos los permisos de acceso
+
+
+
+

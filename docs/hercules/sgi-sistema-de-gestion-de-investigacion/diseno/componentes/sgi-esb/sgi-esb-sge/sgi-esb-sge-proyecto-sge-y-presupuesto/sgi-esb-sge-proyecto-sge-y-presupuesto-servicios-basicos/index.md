@@ -1,0 +1,24 @@
+# Hércules : SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Servicios básicos
+
+
+
+##### Métodos imprescindibles para el funcionamiento de proyectos SGE y presupuestos
+
+
+
+
+
+
+
+| Servicio | Método | URL | Parámetros | Respuesta | Descripción |
+| --- | --- | --- | --- | --- | --- |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Buscar proyectos](/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Buscar+proyectos "/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Buscar+proyectos") | GET | /proyectos | q\+s (query \+ sort)La query estará formada por:* id * titulo * fechaInicio * fechaFin | Lista\[[Proyecto](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto")] | Búsqueda de proyectos económicos, se puede buscar por el identificador del proyecto económico, por el título (o parte del título), entre un rango de fechas en las que se incluye la fecha de inicio o entre un rango de fechas entras lasque se incluye la fecha de fin del proyecto. Devuelve un listado de Proyectos económicos que cumplen los criterios de búsqueda.Los parámetros q y s están explicados en:* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas") |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Consultar detalle de código económico de ingreso](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852969 "/confluence/pages/viewpage.action?pageId=597852969") | GET | /codigos\-economicos\-ingresos/{id} |  | [CodigoEconomicoIngreso](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso") | Detalle de un código económico de tipo ingreso. |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Listar códigos económicos de gastos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852966 "/confluence/pages/viewpage.action?pageId=597852966") | GET | /codigos\-economicos\-gastos |  | Lista\[[CodigoEconomicoGasto](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto")] | Listado de códigos económicos de tipo gasto. |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Listar códigos económicos de ingresos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852968 "/confluence/pages/viewpage.action?pageId=597852968") | GET | /codigos\-economicos\-ingresos |  | Lista\[[CodigoEconomicoIngreso](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso")] | Listado de códigos económicos de tipo ingreso. |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Consultar detalle de código económico de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852967 "/confluence/pages/viewpage.action?pageId=597852967") | GET | /codigos\-economicos\-gastos/{id} |  | [CodigoEconomicoGasto](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto") | Detalle de un código económico de tipo gasto. |
+| [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Consultar detalle de proyecto](/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Consultar+detalle+de+proyecto "/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Consultar+detalle+de+proyecto") | GET | /proyectos/{id} |  | [Proyecto](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto") | Detalle de los datos generales de un proyecto económico. |
+
+
+
+

@@ -1,0 +1,41 @@
+# Hércules : IU\-CSP\-0302\-009 \- Añadir\-modificar entidad financiadora ajena a la convocatoria
+
+
+
+## Formulario Añadir/modificar entidad financiadora ajena a la convocatoria
+
+Formulario que permite añadir o modificar una entidad financiadora ajena a la convocatoria durante el proceso de creación o modificación de una solicitud de proyecto.
+
+
+
+|  | | |
+| --- | --- | --- |
+| Nombre | Tipo | Características / Notas |
+| Entidad financiadora | ReferenciaTextoObligatorio | Nombre o identificador de la entidad financiadora, empresa u organismo que financia la convocatoria. Cuando la convocatoria ya tuviese una entidad financiadora asociada, el nombre de la misma será recuperado a través de [REQ\-INT\-0015\-SGEMP\-0030 \- Consultar datos generales de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa.md"). La búsqueda será resuelta a través del requisito de integración [REQ\-INT\-0015\-SGEMP\-0020 \- Buscar empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md").En una modificación este campo se muestra en modo consulta. |
+| Fuente de financiación | SelectorTexto cortoOpcional | Listado de fuentes de investigación activasEl listado se cargará con el campo "nombre" de los registros de la tabla "fuente financiación" con el campo "activo" a "true" |
+| Tipo financiación | SelectorTexto cortoOpcional | Listado de Tipos de financiación activas. El listado se cargará con el campo "nombre" de los registros de la tabla "tipo financiación" con el campo "activo" a "true" |
+| Porcentaje financiación | Numérico PorcentajeOpcional | Porcentaje de financiación.Validar que el valor esté comprendido entre 0 y 100\. |
+| Importe financiación | EconómicoOpcional | Importe de financiación |
+
+
+
+| Acciones | Descripción | Enlace CU. |
+| --- | --- | --- |
+| Buscar | Muestra la pantalla de búsqueda para seleccionar una entidad financiadora ajena a la convocatoria. | El listado de empresas se podrá consultar a través del buscador de empresas común a todo el SGI, [IU\-GEN\-0080 \- Búsqueda de empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas.md"), que a su vez obtendrá el listado de Empresas disponibles a través del requisito de integración [REQ\-INT\-0015\-SGEMP\-0020 \- Buscar empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md").En el caso de que el buscador no devolviese la  empresa que se desea añadir como entidad financiadora ajena de proyecto se podrá solicitar el registro de la nueva empresa, utilizando para ello el formulario de solicitud de alta [IU\-GEN\-0081 \- Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa.md") que cumple con el requisito [REQ\-INT\-0015\-SGEMP\-0040 \- Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0040-solicitar-alta-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0040-solicitar-alta-de-empresa.md")[.](https://confluence.um.es/confluence/pages/viewpage.action?pageId=89621944 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=89621944") Este registro solo podrá ser provocado por ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor.En el caso de que el buscador devolviese la empresa que se desea añadir como entidad financiadora ajena de proyecto, pero se quisiera realizar alguna modificación en sus datos, se podrá solicitar dicha modificación, utilizando para ello el formulario de solicitud de modificación [IU\-GEN\-0082 \- Ver detalle \- Solicitar modificación de empresa](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-GEN-0082+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+empresa&linkCreation=true&fromPageId=597853297 "/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-GEN-0082+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+empresa&linkCreation=true&fromPageId=597853297") que cumple con el requisito [REQ\-INT\-0015\-SGEMP\-0045 \- Solicitar modificación de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0050-solicitar-modificacion-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0050-solicitar-modificacion-de-empresa.md")[.](https://confluence.um.es/confluence/pages/viewpage.action?pageId=89621944 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=89621944") Esta modificación solo podrá ser provocado por ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor. |
+
+### Botones generales a la pantalla
+
+
+
+| Acciones | Descripción | Enlace CU. |
+| --- | --- | --- |
+| Añadir/Aceptar | El botón se mostrará como:* Añadir, cuando se accede al formulario para añadir una nueva entidad financiadora  (ajena a la convocatoria). * Aceptar, cuando se accede al formulario para modificar una entidad financiadora (ajena a la convocatoria) ya creada previamente. | Se inserta o modificar el registro correspondiente sobre la tabla "solicitud proyecto entidad financiadora ajena"Al añadir una nueva entidad financiadora ajena habrá que crear un nuevo registro en la tabla "SolicitudProyectoEntidad" informando el campo "solicitudProyectoEntidadFinanciadoraAjena" y dejando los campos "convocatoriaEntidadFinanciadora" y "convocatoriaEntidadGestora" a null |
+| Cancelar | Retorna al listado de Entidades financiadoras sin salvar los posibles cambios. |  |
+
+  
+  
+
+
+
+
+

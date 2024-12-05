@@ -1,0 +1,63 @@
+# Hércules : IU\-CSP\-0951\-001 \- Búsqueda simple y listado de grupos de investigación \- Unidades de gestión
+
+
+
+## Formulario Búsqueda simple y listado de grupos de investigación \- Unidades de gestión
+
+Pantalla que muestra el formulario de búsqueda que permite aplicar filtros sobre el listado de grupos de investigación.
+
+
+
+|  | | | |
+| --- | --- | --- | --- |
+| Nombre | | Tipo | Características / Notas |
+| Formulario de búsqueda de grupos. La búsqueda llevará implícito el filtro que limite los grupos de investigación a los activos (campo "activo" a "true"). | | | |
+| Nombre | | Texto largoOpcional | Campo para introducir la cadena de texto por la que se aplicará la búsqueda sobre el campo "nombre" de la tabla "grupo" |
+| Código | | Texto cortoOpcional | Código alfanumérico generado automáticamente por el SGI al crear el grupo (aunque puede ser modificado por el ACT\-CSP\-003\-Gestor, ACT\-CSP\-004\-Administrador.Filtro a aplicar sobre el campo "código" de la tabla "grupo". |
+| Miembro de equipo | | BuscadorOpcional | A través del botón Buscar se dará acceso al buscador de personas común al SGI, [IU\-GEN\-0100\-0060 \- Búsqueda de persona](https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453"). Las condiciones de invocación a este buscador se recogen en  la tabla de acciones.La persona seleccionada se utilizará para aplicar como filtro de búsqueda sobre el campo "personaRef" de la tabla "grupo equipo". |
+| Código identificación SGE | | Texto cortoOpcional | Código de identificación del proyecto económico del SGE con el que se vincula el grupo de investigación SGI. Podrá ser alfanumérico.Filtro a aplicar sobre el campo "proyecto SGE ref" de la tabla "grupo". |
+| Buscar | | Botón | Acción "Buscar" |
+| Limpiar | | Enlace | Acción "Limpiar" |
+| Búsqueda ampliada | | Enlace | Acción "Búsqueda ampliada" |
+| Listado de grupos de investigación que cumplen las condiciones indicadas en el filtro. La tabla de resultados se mostrada ordenada por defecto por ID interno, en orden de mayor a menor. | | | |
+| Nombre | | Texto largo | Nombre del grupo de investigación.Se corresponde con el campo "nombre" de la tabla "grupo". |
+| Investigador/a principal | | Texto | Se recuperarán el Nombre y apellidos por medio de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") del investigador/a principal, es decir, de todos los miembros del grupo de investigación (tabla "grupo equipo") aquel que **actualmente** (a fecha actual) tiene el "rol" con el flag "principal" a true. En caso de existir mas de una persona, se mostrará el que tenga el mayor porcentaje de dedicación al grupo (campo "participación" de la tabla "grupo equipo"). Y en caso de coincidir se mostrarán separados por coma. |
+| Código | | Texto corto | Código del grupo de investigaciónSe corresponde con el campo "código" de la tabla "grupo". |
+| Fecha inicio | | Fecha | Fecha de inicio del grupo de investigación. Campo "fecha inicio"  de la tabla "grupo". |
+| Fecha fin | | Fecha | Fecha de finalización del grupo de investigación. Campo "fecha fin"  de la tabla "grupo". |
+| Tipo grupo | | Texto corto | Nombre del Tipo de grupo actual, extraído del enumerado "Tipo grupo" de la tabla "Grupo tipo", a partir del campo "tipo" de la tabla "grupo" |
+| Activo | | Boolean | Campo "activo" de la tabla "grupo", indicador del borrado lógico del registro. En esta búsqueda simple el usuario no puede establecer el filtro por este campo, siendo éste un filtro implícito, de forma que la búsqueda se limite a los grupos de investigación activos, por lo que, para este tipo de búsqueda, este campo mostrará siempre el valor "Sí". |
+| Modificar | | Icono de acción | Acción "Modificar" |
+| Eliminar | | Icono de acción | Acción "Eliminar" |
+| Recuperar | | Icono de acción | Acción "Recuperar" |
+| Ver | | Icono de acción | Acción "Ver" |
+| Añadir grupo investigación | | Icono de acción | Acción "Añadir grupo investigación" |
+
+
+
+| Acciones | Descripción | Enlace CU. | Permisos |
+| --- | --- | --- | --- |
+| Formulario de búsqueda | | | |
+| Buscar miembro equipo | Pantalla genérica de búsqueda de personas | Muestra la pantalla [IU\-GEN\-0060 \- Búsqueda de personas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453") que hará uso del requisito de integración [REQ\-INT\-0020\-SGP\-0020 \- Buscar persona en un listado de colectivo](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0020+-+Buscar+persona+en+un+listado+de+colectivos "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0020+-+Buscar+persona+en+un+listado+de+colectivos").  Se le deberán pasar a este buscador el listado de colectivos (campo "colectivo ref")  recuperados de la tabla "rol proyecto colectivo" que estén asociados a cualquier rol  activo (campo "activo" a "true") de la tabla "rol proyecto". | No se necesita permiso para mostrar la pantalla de búsqueda de personas. |
+| Buscar | Realiza la búsqueda | Se deben aplicar todos los filtros introducidos además de los filtros implícitos:* Por el campo "activo": el grupo  de investigación debe de estar activo (campo "activo" a "true")  Cada uno de los campos de filtrado aplicará de acuerdo a lo establecido a nivel individual. Todos los filtros aplicarán entre sí como una condición "y". | CSP\-GIN\-VCSP\-GIN\-ECSP\-GIN\-BCSP\-GIN\-R |
+| Limpiar | Se limpia el formulario de búsqueda | Vacía el valor de cualquiera de campo del formulario |  |
+| Búsqueda ampliada | Muestra la pantalla de búsqueda ampliada | Muestra la pantalla [IU\-CSP\-0951\-002 \- Búsqueda ampliada y listado de grupos de investigación \- Unidades de gestión](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0951-busqueda-y-listado-de-grupos-de-investigacion/iu-csp-0951-002-busqueda-ampliada-y-listado-de-grupos-de-investigacion-unidades-de-gestion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0951-busqueda-y-listado-de-grupos-de-investigacion/iu-csp-0951-002-busqueda-ampliada-y-listado-de-grupos-de-investigacion-unidades-de-gestion.md") | CSP\-GIN\-VCSP\-GIN\-ECSP\-GIN\-BCSP\-GIN\-R |
+| Listado de grupos de investigación que cumplen las condiciones indicadas en el filtro. | | | |
+| Modificar | Carga el detalle del grupo de investigación permitiendo la modificación de sus datos | Acción disponible para usuarios ACT\-CSP\-003\-Gestor y ACT\-CSP\-004\-Administrador que tenga el permiso indicado, y para grupos con marcador de "activo" a "true".Da acceso al detalle de grupo en modo de modificación, mostrando el apartado inicial [IU\-CSP\-0953\-001 \- Modificar\-consultar grupo investigación \- Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0953-modificar-consultar-grupo-de-investigacion/iu-csp-0953-001-modificar-consultar-grupo-investigacion-datos-generales.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0953-modificar-consultar-grupo-de-investigacion/iu-csp-0953-001-modificar-consultar-grupo-investigacion-datos-generales.md") | CSP\-GIN\-E |
+| Eliminar | Elimina ("desactiva") el grupo | Acción disponible para usuarios ACT\-CSP\-003\-Gestor y ACT\-CSP\-004\-Administrador que tenga el permiso indicado y para grupos con marcador de "activo" a "true".Se actualizará el grupo poniendo el campo "activo" a "false" | CSP\-GIN\-B |
+| Recuperar | Vuelva a activar el grupo | Acción disponible para usuarios ACT\-CSP\-003\-Gestor y ACT\-CSP\-004\-Administrador que tenga el permiso indicado y para proyectos con marcador de "activo" a "false".Se mostrará un mensaje de confirmación al usuario. Si la confirmación es positiva se validará que no exista otro grupo con el mismo valor en el campo "código" y con marcador "activo" a "true". En caso de existir se mostrará un mensaje informando al usuario que la activación no se puede realizar por existir un grupo activo con el mismo código. En caso contrario, la reactivación podrá realizarse. Se actualizará el grupo poniendo el campo "activo" a "true". | CSP\-GIN\-R |
+| Ver | Ver el detalle del grupo en modo "solo lectura" | Será la única acción disponible para usuarios ACT\-CSP\-005\-Visor (siempre que tenga el permiso indicado) para todos los grupos con marcador "activo" a "true". Da acceso al detalle del grupo, en modo solo lectura, cargando el apartado inicial [IU\-CSP\-0953\-001 \- Modificar\-consultar grupo investigación \- Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0953-modificar-consultar-grupo-de-investigacion/iu-csp-0953-001-modificar-consultar-grupo-investigacion-datos-generales.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0953-modificar-consultar-grupo-de-investigacion/iu-csp-0953-001-modificar-consultar-grupo-investigacion-datos-generales.md") | CSP\-GIN\-V |
+| Acciones generales | | | |
+| Paginación | Control genérico de paginación por la tabla de resultados |  |  |
+| Añadir grupo | Muestra la pantalla de creación de grupo | Muestra la pantalla [IU\-CSP\-0952\-001 \- Crear grupo investigación \- Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0952-crear-grupo-de-investigacion/iu-csp-0952-001-crear-grupo-investigacion-datos-generales.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0952-crear-grupo-de-investigacion/iu-csp-0952-001-crear-grupo-investigacion-datos-generales.md") | CSP\-GIN\-C |
+| Exportar | Permite la exportación del listado devuelto por el buscador | Muestra la pantalla [IU\-CSP\-0951\-004 \- Exportación listado de grupos \- Unidades de gestión](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0951-busqueda-y-listado-de-grupos-de-investigacion/iu-csp-0951-004-exportacion-listado-de-grupos-unidades-de-gestion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0951-busqueda-y-listado-de-grupos-de-investigacion/iu-csp-0951-004-exportacion-listado-de-grupos-unidades-de-gestion.md") | CSP\-GIN\-VCSP\-GIN\-E |
+
+### Permisos de acceso a la pantalla
+
+#### Por actor
+
+#### Todos los permisos de acceso
+
+
+
+

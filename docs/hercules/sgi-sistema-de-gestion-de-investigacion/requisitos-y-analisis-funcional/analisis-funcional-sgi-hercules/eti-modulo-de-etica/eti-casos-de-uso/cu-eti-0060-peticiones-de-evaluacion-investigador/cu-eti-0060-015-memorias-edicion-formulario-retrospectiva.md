@@ -1,0 +1,63 @@
+# Hércules : CU\-ETI\-0060\-015 \- Memorias \- Edición formulario retrospectiva
+
+
+
+### Descripción
+
+Formulario para rellenar el formulario de retrospectiva
+
+### Actores
+
+#### Actor principal
+
+ACT\-ETI\-002\-Investigador
+
+ACT\-ETI\-003\-Solicitante
+
+ACT\-ETI\-006\-Responsable memoria
+
+### Precondiciones
+
+Usuario logado en el sistema con el rol adecuado dentro del módulo ETI.
+
+Haber accedido a la opción de menú Mis peticiones de evaluación y seleccionado una petición del listado para su edición.
+
+Sólo se muestran las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de la memoria de la petición de evaluación.
+
+Únicamente se mostrará el formulario de Retrospectiva si la memoria es de tipo CEEA y el investigador había indicado en la memoria que requería retrospectiva y la fecha actual es igual o mayor a la fecha de retrospectiva indicada en la memoria por el investigador.
+
+Los estados de la retrospectiva son:
+
+* Pendiente: cuando el investigador en su formulario de memoria indica que requiere retrospectiva e indica la fecha
+* Completada: cuando el investigador rellena el informe de Retrospectiva
+* En secretaría: cuando el investigador desde el listado de memoria pulsa sobre la acción de Enviar a Secretaría la Retrospectiva
+* En evaluación: cuando el gestor la selecciona para su evaluación en una convocatoria de reunión.
+* Fin evaluación: cuando la evaluación se realiza y se pone su dictamen a "Favorable"
+
+### Garantías de éxito (postcondiciones)
+
+Se guardan las respuestas del formulario y se cambia el estado de la retrospectiva a "Completada".
+
+  
+
+
+### Escenario principal (flujo básico)
+
+1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de la memoria de la petición de evaluación.
+2. Se selecciona la petición de evaluación.
+3. Se presenta la pantalla de edición de la petición de evaluación.
+4. El usuario va a la pestaña de Memorias.
+5. El usuario selecciona del listado una memoria que sea de tipo CEEA y tenga que entregar retrospectiva (así lo indicó en su memoria CEEA)
+6. La fecha actual es mayor o igual a la fecha de retrospectiva indicada en el formulario de la memoria CEEA
+7. Al usuario se le presenta la pantalla de Datos generales de la memoria.
+8. El usuario selecciona la opción de menú Retrospectiva.
+9. El usuario rellena el formulario.
+10. El usuario selecciona la acción Guardar Memoria.
+11. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
+12. El usuario es informado del resultado positivo de la acción.
+13. Se mantienen en misma pantalla de edición.
+14. Se cambia el estado de la retrospectiva a "Completada".
+
+
+
+

@@ -1,0 +1,13 @@
+# Hércules : IU\-ETI\-0040\- Gestión de Evaluadores
+
+
+
+* [IU\-ETI\-0040\-001 Búsqueda y listado de evaluadores](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-001-busqueda-y-listado-de-evaluadores.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-001-busqueda-y-listado-de-evaluadores.md")
+* [IU\-ETI\-0040\-002 Alta evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-002-alta-evaluador.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-002-alta-evaluador.md")
+* [IU\-ETI\-0040\-003 Modificar evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-003-modificar-evaluador.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-003-modificar-evaluador.md")
+* [IU\-ETI\-0040\-004 Conflicto de intereses \- Añadir](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-004-conflicto-de-intereses-anadir.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-004-conflicto-de-intereses-anadir.md")
+* [IU\-ETI\-0040\-005 \- Exportación listado de evaluadores](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-005-exportacion-listado-de-evaluadores.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0040-gestion-de-evaluadores/iu-eti-0040-005-exportacion-listado-de-evaluadores.md")
+
+
+
+

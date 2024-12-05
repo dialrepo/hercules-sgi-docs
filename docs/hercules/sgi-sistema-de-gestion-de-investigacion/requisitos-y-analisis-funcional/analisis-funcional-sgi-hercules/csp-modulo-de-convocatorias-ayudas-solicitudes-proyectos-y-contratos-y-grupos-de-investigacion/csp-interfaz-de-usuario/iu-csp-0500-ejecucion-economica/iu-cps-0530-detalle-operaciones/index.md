@@ -1,0 +1,11 @@
+# Hércules : IU\-CPS\-0530 \- Detalle operaciones
+
+
+
+* [IU\-CSP\-0530\-001 \- Detalle operaciones \- Gastos](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-001-detalle-operaciones-gastos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-001-detalle-operaciones-gastos.md")
+* [IU\-CSP\-0530\-002 \- Detalle operaciones \- Ingresos](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-002-detalle-operaciones-ingresos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-002-detalle-operaciones-ingresos.md")
+* [IU\-CSP\-0530\-003 \- Detalle operaciones \- Modificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-003-detalle-operaciones-modificaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-cps-0530-detalle-operaciones/iu-csp-0530-003-detalle-operaciones-modificaciones.md")
+
+
+
+
