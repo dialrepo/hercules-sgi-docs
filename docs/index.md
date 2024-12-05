@@ -1,8 +1,4 @@
-# Home Page
-
- Hércules : Hércules
-
-
+# Hércules 
 
 
 

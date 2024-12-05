@@ -1,14 +1,12 @@
 
 
-.md-grid {
-    max-width: initial;
-    color: blue;
-}
-
 .md-header__inner {
+    color: white;
     padding: 0 .3rem;
 }
 
 .md-main__inner {
     margin-top: 0;
+    color: black;
 }
+
