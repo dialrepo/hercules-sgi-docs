@@ -1,7 +1,11 @@
 site_name: Hércules SGI
 
+repo_url: https://github.com/dialrepo/hercules-sgi-docs/
+edit_uri: blob/main/docs/
+
 theme:
   name: material
+  logo: assets/images/icons/favicon.jpg
   features:
     - navigation.footer
     - navigation.indexes
@@ -12,6 +16,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+
 
 markdown_extensions:
   - toc:
