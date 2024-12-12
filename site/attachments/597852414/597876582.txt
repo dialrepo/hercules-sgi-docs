@@ -1,0 +1,58 @@
+
+
+# Implementación de API para sellar documentos en blockchain
+
+Resumen:  tenemos una funcion de timestamp que básicamente anota en una transacción en blockchain un texto corto. Se recomienda que ese texto sea el hash del documento. Retorna 
+la Id transacción de la transacción.
+
+
+Endpoints:
+https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-hello
+https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-data
+https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-tx
+https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-isconfirmed
+https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-timestamp
+
+
+Qué hace cada enpoint se ve mejor en esta secuencia de ejemplo:
+
+
+Algunos preparativos y probamos el helloworld(única llamada no autenticada)
+$ pass="Pass.TESTNETHERC"  #hemos puesto esta pass para las pruebas
+$ url="https://vwoocidtuj.execute-api.eu-west-1.amazonaws.com/dev/herc-timestamp-"
+$ curl --location --request GET "${url}hello"
+
+
+Hacemos nuestro primer sello en blockchain!!!!
+$ curl --location --request POST "${url}timestamp?token=${pass}&data=holamundo"
+{"status":"success","tx":"44bcd25cedae3b4435f058166370fb38264d978b3bc744d91a0039971a4b1874"}
+
+
+
+Vamos a jugar con esta transacción
+$ tx="44bcd25cedae3b4435f058166370fb38264d978b3bc744d91a0039971a4b1874"
+
+
+Podemos preguntar si la transacción ya está confirmada. En esta blockchain se puede ignorar el false. Como mucho en 10 minutos se vuelve true
+$ curl --location --request GET "${url}isconfirmed?token=${pass}&txhash=${tx}"
+true/false
+
+
+
+Obtenemos la cadena que enviamos en su momento y que debe estar en la transaccion $tx
+$ curl --location --request GET "${url}data?token=${pass}&txhash=${tx}"
+"hola"
+
+
+Para los muy cafeteros se puede obtener toda la transacción. Entre esos campos estará el texto que hemos sellado, es decir "hola"
+$ curl --location --request GET "${url}tx?token=${pass}&txhash=${tx}"
+{"txid":"44bcd25cedae3b4435f058166370fb38264d978b3bc744d91a0039971a4b1874","hash":"44bcd25cedae3b4435f058166370fb38264d978b3bc744d91a0039971a4b1874","version":1,"size":240,"locktime":0,"vin":[{"coinbase":"","txid":"e178820f15d65daf9af04f05d787f9a87fe38d2e8bf96eaba517b692e793c0fb","vout":1,"scriptSig":{"asm":"30440220185743b2114f7d42073fc7a5ac217e07c65228ac60dc71bfe16ef76fecec2ef502206d8f4dc046bf1ecf6a22fa83c290c86c4b205a0dd5131b87d9911f2e9add142f[ALL|FORKID] 02880a16ee77bd6b0c1677434456b90939eed54c097abce0420b2b2093c9330185","hex":"4730440220185743b2114f7d42073fc7a5ac217e07c65228ac60dc71bfe16ef76fecec2ef502206d8f4dc046bf1ecf6a22fa83c290c86c4b205a0dd5131b87d9911f2e9add142f412102880a16ee77bd6b0c1677434456b90939eed54c097abce0420b2b2093c9330185"},"sequence":4294967295}],"vout":[{"value":0,"n":0,"scriptPubKey":{"asm":"OP_RETURN 1634496360","hex":"6a04686f6c61","type":"nonstandard","opReturn":{"type":"OP_RETURN","action":"","text":"","parts":["hola"]},"isTruncated":false}},{"value":0.00050989,"n":1,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 3dbc5bc2263a9c29813e6cfc1fe57e93672877f9 OP_EQUALVERIFY OP_CHECKSIG","hex":"76a9143dbc5bc2263a9c29813e6cfc1fe57e93672877f988ac","reqSigs":1,"type":"pubkeyhash","addresses":["mm9PA8RvgWR9NMq1fUn2eQFGSyGYPEnaUA"],"isTruncated":false}},{"value":0.00000601,"n":2,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 3dbc5bc2263a9c29813e6cfc1fe57e93672877f9 OP_EQUALVERIFY OP_CHECKSIG","hex":"76a9143dbc5bc2263a9c29813e6cfc1fe57e93672877f988ac","reqSigs":1,"type":"pubkeyhash","addresses":["mm9PA8RvgWR9NMq1fUn2eQFGSyGYPEnaUA"],"isTruncated":false}}]}
+
+
+
+# NOTA FINAL
+
+La API es stateless con funciones lambda, es decir, no guarda nada de nadie. Está todo el estado entre el cliente y la blockchain.
+
+Las llamadas sin autorización y el hello tardan 5 segundos en responder. Solo el timestamp es "POST". 
+El resto de llamadas tardan más o menos en función de los recursos a los que pide datos.
