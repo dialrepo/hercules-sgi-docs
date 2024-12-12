@@ -1,0 +1,4 @@
+Nombre,Apellidos,E-mail,Comité,Cargo comité,Fecha alta,Fecha baja,Estado,Conflicto1: Nombre,Conflicto1: Apellidos,Conflicto1: E-mail,Conflicto2: Nombre,Conflicto2: Apellidos,Conflicto2: E-mail
+OSCAR,ALVAREZ MATEO,oscar.alvarezm@um.es,CEEA,PRESIDENTE,10/07/20,17/01/22,Inactivo,,,,,,
+MARIA,NAVARRO TORRES,maria.navarrot@um.es,CEEA,PRESIDENTE,17/01/22,,Activo,ELENA,GARCÍA RUESCO,elena.garciar@um.es,,,
+ANTONIO,MORALES ABAD,antonio.moralesa@um.es,CEEA,VOCAL,17/01/22,,Activo,IRENE,PEREZ LOPEZ,irene.perezl@um.es,SONIA,DIAZ ROMERO,sonia.diazr@um.es
